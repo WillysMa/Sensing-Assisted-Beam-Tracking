@@ -1,0 +1,61 @@
+{
+  "epochs": 100,
+  "batch_size": 32,
+  "test_batch_size": 32,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "loss_type": "focal",
+  "grad_clip": 10.0,
+  "patience": 20,
+  "use_early_stopping": true,
+  "min_delta": 0.0001,
+  "use_ema": false,
+  "ema_decay": 0.999,
+  "ema_warmup_steps": 1000,
+  "feature_size": 64,
+  "gru_hidden_size": 64,
+  "gru_num_layers": 2,
+  "num_classes": 64,
+  "seq_length": 8,
+  "num_pred": 6,
+  "downsample_ratio": 1,
+  "attention_mode": 2,
+  "data_root": "../dataset/scenario9",
+  "dataset_pct": 1.0,
+  "train_csv_name": "train_seqs_6.csv",
+  "test_csv_name": "test_seqs_6.csv",
+  "num_workers": 8,
+  "use_gpu": true,
+  "tensorboard": false,
+  "save_dir": "saved_folder_train",
+  "debug": false,
+  "resume": false,
+  "start_epoch": 0,
+  "scheduler": "cosine",
+  "T_0": 10,
+  "T_mult": 2,
+  "eta_min": 1e-06,
+  "milestones": [
+    20,
+    50,
+    80,
+    100
+  ],
+  "gamma": 0.5
+}
+
+Model Architecture Summary
+==================================================
+
+Model summary could not be generated
+
+==================================================
+
+Model Parameters:
+Total parameters: 1,788,280
+Trainable parameters: 1,788,280
+Non-trainable parameters: 0
+TrainDataSize: 3286
+TestDataSize: 774
+DataSetTrainPath: /homedir04/mma21/Simulator_v1/dataset/scenario9/train_seqs_6.csv
+DataSetTestPath: /homedir04/mma21/Simulator_v1/dataset/scenario9/test_seqs_6.csv

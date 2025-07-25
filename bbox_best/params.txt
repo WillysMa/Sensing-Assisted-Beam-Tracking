@@ -1,0 +1,45 @@
+{
+  "epochs": 100,
+  "train_batch_size": 8,
+  "test_batch_size": 32,
+  "lr": 0.001,
+  "loss_type": "focal",
+  "patience": 20,
+  "use_early_stopping": true,
+  "min_delta": 0.0001,
+  "seed": 42,
+  "feature_size": 64,
+  "gru_hidden_size": 64,
+  "gru_num_layers": 1,
+  "num_classes": 64,
+  "seq_length": 8,
+  "num_pred": 6,
+  "data_root": "../dataset/scenario9",
+  "dataset_pct": 1.0,
+  "train_csv_name": "train_seqs_6_bbox.csv",
+  "test_csv_name": "test_seqs_6_bbox.csv",
+  "num_workers": 4,
+  "use_gpu": true,
+  "save_dir": "saved_folder_train",
+  "debug": false,
+  "T_0": 10,
+  "T_mult": 2,
+  "eta_min": 1e-05
+}
+
+Model Architecture Summary
+==================================================
+
+------------------------------------------------------------------------------
+      Layer (type)               Output Shape         Param #     Tr. Param #
+==============================================================================
+          Linear-1                 [1, 8, 64]             320             320
+             GRU-2     [1, 8, 64], [1, 1, 64]          24,960          24,960
+          Linear-3                 [1, 8, 64]           4,160           4,160
+==============================================================================
+Total params: 29,440
+Trainable params: 29,440
+Non-trainable params: 0
+------------------------------------------------------------------------------
+
+==================================================
