@@ -32,5 +32,5 @@ We use Scenario 9 of the Deepsense 6G dataset https://www.deepsense6g.net/scenar
 
 ## Train model
 1. Download the dataset scenrio 9 to local workstation.
-2. Run tran.py
+2. Run train_weighted.py
 
